@@ -71,33 +71,32 @@ body {
 	padding-top: 1em;
 }
 
+
 .meta {
 	text-align: right;
+	> h1 {
+		font-family: "ExistenceLight";
+		text-transform:uppercase;
+		font-size: 2.5em;
+	}
+	a {
+		color:#000;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color:lighten(@linkColor, 10%);
+	}
+
+	>ul {
+		list-style: none;
+	}
+
+	li {
+		line-height: 1.5em;
+	}
 }
 
-.meta > h1 {
-	font-family: "ExistenceLight";
-	text-transform:uppercase;
-	font-size: 2.5em;
-}
-
-.meta  a {
-	color:#000;
-}
-
-.meta a:hover {
-	text-decoration: none;
-	color:lighten(@linkColor, 10%);
-}
-
-
-.meta>ul {
-	list-style: none;
-}
-
-.meta li {
-	line-height: 1.5em;
-}
 
 .accent-color {
 	color:@accent;
@@ -291,6 +290,9 @@ li.comment, li.pingback {
 		h1 {
 			text-align: center;
 			font-size: 2em;
+		}
+		.post-meta-item {
+			float:right;
 		}
 	}
 }
