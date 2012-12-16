@@ -1,0 +1,299 @@
+// variable to control color scheme
+@accent: #623083;
+
+// sticky footer
+html, body {
+	height: 100%;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -7em;
+}
+
+#push, footer {
+	min-height: 7em;
+}
+
+
+// general stuff
+body {
+	font-family: "ContaxSans55Regular";
+	font-size: 1em;
+	line-height: 1.5em;
+	padding:0;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-smooth: always;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+::selection {
+	background:lighten(@accent, 30%);
+}
+
+::-moz-selection {
+	background:lighten(@accent, 30%);
+}
+
+
+.form-horizontal .controls {
+	margin-top: 0.33em;
+}
+
+#wrap>.container-fluid {
+	padding:0;
+}
+
+.main {
+	text-align: center;
+}
+
+.main>.container-fluid {
+	text-align: left;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.main>.container-fluid>.row-fluid>.span8 {
+	padding-top: 1em;
+}
+
+.meta {
+	text-align: right;
+}
+
+.meta > h1 {
+	font-family: "ExistenceLight";
+	text-transform:uppercase;
+	font-size: 2.5em;
+}
+
+.meta  a {
+	color:#000;
+}
+
+.meta a:hover {
+	text-decoration: none;
+	color:lighten(@linkColor, 10%);
+}
+
+
+.meta>ul {
+	list-style: none;
+}
+
+.meta li {
+	line-height: 1.5em;
+}
+
+.accent-color {
+	color:@accent;
+}
+
+.social-login-options {
+	margin: 1em;
+}
+
+.main>.container-fluid>.row-fluid {
+	margin-top: 1em;
+}
+
+header {
+	// height: 5em;
+	background-color: darken(@accent, 30%);
+	border-bottom: 0.33em solid @accent;
+	color: lighten(@accent, 55%)!important;
+	padding-bottom: 20px;
+
+	h1 {
+		font-size: 2.25em;
+		font-family: ChunkFiveRegular;
+		padding: 0;
+		margin: 0.33em 0 0 0;
+		font-weight:normal;
+	}
+
+	a, a:hover {
+		color: lighten(@accent, 55%)!important;
+		text-decoration: none;
+	}
+
+	.logo {
+		padding-left:2em;
+	}
+
+	.headline {
+		font-size: 1.5em;
+
+	}
+} 
+
+
+footer {	
+	.box-sizing(border-box); // sticky + padding needs that
+	background-color: darken(@accent, 30%);
+	border-top: 0.66em solid @accent;
+	color: lighten(@accent, 55%);	
+	padding: 1em 0 1em 0;
+
+	a:hover {
+		color:lighten(@linkColor, 15%);
+		text-decoration: none;
+	}
+
+	.social {
+		text-align: right;
+	}
+
+	.post-menu ul, .social ul {
+		list-style: none;
+		li {
+			margin-top: 0.5em;
+
+			a {
+				line-height: 16px;
+				.icon {
+					vertical-align: middle
+				}
+			}
+		}
+	}
+
+	form.searchform {
+		input, button {
+			// background-color: lighten(@accent, 55%);
+			border-color: lighten(@accent, 20%);
+			color:darken(@accent, 20%);
+			#gradient > .vertical(lighten(@accent, 55%), lighten(@accent, 45%));
+			.placeholder(lighten(@accent, 20%));
+		}
+		button:hover {
+			background-position: 0;
+		}
+		button>span.icon {
+			color:darken(@accent, 20%);
+		}
+	}
+}
+
+// .post-navigator>
+
+.post-navigator {
+	margin: 1em 0 1em 0;
+
+	>a {
+		width:50%;
+	}
+
+	.newer {
+		float:left;
+	}
+
+	.older {
+		float:right;
+	}
+}
+
+.comments {
+	padding: 0 0.5em 0 0.5em;
+	ol, ul {
+		list-style: none;
+		padding:0.75em;
+	}
+
+	.comment-meta, .comment-awaiting-moderation {
+		font-size: 0.8em;
+	}
+
+	.comment-body {
+		padding:0.25em 1em 0.25em 1em;
+	}
+
+	.span8>ol {
+		margin-left: 0;
+		>li {
+			margin-top: 2em;
+		}
+		>li:first-child {
+			margin-top: 0em;
+		}
+	}
+
+	.vcard {
+		border-bottom: 1px solid @accent;
+		padding:0.33em;
+	}
+
+	.reply {
+		text-align: right;
+	}
+
+	// only applies to a 'respond form' when used in existing comments ('reply')
+	#respond {
+		margin: 0 0.5em 0 3em;
+	}
+}
+
+
+
+#commentform {
+	textarea, input {
+		width:90%;
+	}
+
+	input[type="submit"] {
+		width:auto;
+	}
+}
+
+li.comment, li.pingback {
+	 border:1px solid lighten(@accent, 40%);
+	background-color: #ededed;
+	.border-radius(3px);
+
+}
+
+@media (max-width: 767px) {
+	header {
+		h1 {
+			font-size: 2em;
+			margin: 0.5em 0 0 0;
+		}
+		.headline {
+			padding-left: 8em;
+		}
+	}
+
+	footer .social, footer .post-menu {
+		padding-right: 0.7em;
+	}
+
+	.meta {
+		li {
+			margin-left:1em;
+			float:left;
+			.icon {
+				float:left;
+				margin-right: 0.25em;
+			}
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 2em;
+		}
+	}
+}
