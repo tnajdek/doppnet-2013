@@ -19,6 +19,7 @@
 			</div>
 		</div>
 	</div>
+<?php endif;?>	
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span4 meta">
@@ -29,4 +30,3 @@
 			</div>
 		</div>
 	</div>
-<?php endif;?>
