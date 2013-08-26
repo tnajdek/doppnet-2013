@@ -5,10 +5,14 @@
 <title>
   <?php
     if( ! is_home() ):
-      wp_title( '|', true, 'right' );
+      wp_title( '', true);
+      echo(" | ");
+      bloginfo( 'name' );
+    else:
+      bloginfo( 'name' );
     endif;
-    bloginfo( 'name' );
   ?>
+
 </title>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 <?php wp_head(); ?>
